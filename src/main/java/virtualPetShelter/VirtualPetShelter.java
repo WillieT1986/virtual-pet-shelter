@@ -18,8 +18,8 @@ public class VirtualPetShelter {
 		pets.put(newName, virtualPet);
 	}
 
+	// Return Collection of Pets within Shelter
 	public Collection<VirtualPet> pets() {
-
 		return pets.values();
 	}
 
