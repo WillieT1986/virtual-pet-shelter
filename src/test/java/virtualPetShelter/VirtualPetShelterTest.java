@@ -33,7 +33,7 @@ public class VirtualPetShelterTest {
 	@Test
 	public void shouldAddVirtualPetName() {
 		VirtualPet check = new VirtualPet(PET_NAME, DESCRIPTION);
-		underTest.add(check);
+		underTest.intake(check);
 		VirtualPet retrieved = underTest.findPet(PET_NAME);
 		assertThat(retrieved, is(check));
 	}
@@ -44,8 +44,8 @@ public class VirtualPetShelterTest {
 		VirtualPet pet = new VirtualPet("Husky", DESCRIPTION);
 		VirtualPet anotherPet = new VirtualPet(anotherName, DESCRIPTION);
 
-		underTest.add(pet);
-		underTest.add(anotherPet);
+		underTest.intake(pet);
+		underTest.intake(anotherPet);
 
 		Collection<VirtualPet> pets = underTest.pets();
 
@@ -55,5 +55,17 @@ public class VirtualPetShelterTest {
 		assertTrue(pets.contains(anotherPet));
 		assertEquals(2, pets.size());
 	}
+
+	// @Test
+	// public void shouldShelterFeedPet() {
+	// VirtualPet pet = new VirtualPet("Fido", "flea-ridden");
+	//
+	// underTest.intake(pet); // adds him to the shelter
+	// underTest.feedAll(); // feeds all of the pets in the shelter
+	//
+	// int hunger = pet.getHunger();
+	// assertEquals(15, hunger);
+	//
+	// }
 
 }

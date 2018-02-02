@@ -13,7 +13,7 @@ public class VirtualPetShelter {
 	}
 
 	// Return specific Virtual Pet given its name
-	public void add(VirtualPet virtualPet) {
+	public void intake(VirtualPet virtualPet) {
 		String newName = virtualPet.getName();
 		pets.put(newName, virtualPet);
 	}
