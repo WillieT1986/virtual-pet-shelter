@@ -31,7 +31,7 @@ public class VirtualPetShelterTest {
 	}
 
 	@Test
-	public void shouldAddVirtualPetName() {
+	public void shouldRetrieveVirtualPetName() {
 		VirtualPet check = new VirtualPet(PET_NAME, DESCRIPTION);
 		underTest.intake(check);
 		VirtualPet retrieved = underTest.findPet(PET_NAME);
@@ -39,7 +39,7 @@ public class VirtualPetShelterTest {
 	}
 
 	@Test
-	public void shouldAddMultipleVirtualPetNames() {
+	public void shouldIntakeMultipleVirtualPetNames() {
 		String anotherName = "Akita";
 		VirtualPet pet = new VirtualPet("Husky", DESCRIPTION);
 		VirtualPet anotherPet = new VirtualPet(anotherName, DESCRIPTION);
@@ -56,16 +56,15 @@ public class VirtualPetShelterTest {
 		assertEquals(2, pets.size());
 	}
 
-	// @Test
-	// public void shouldShelterFeedPet() {
-	// VirtualPet pet = new VirtualPet("Fido", "flea-ridden");
-	//
-	// underTest.intake(pet); // adds him to the shelter
-	// underTest.feedAll(); // feeds all of the pets in the shelter
-	//
-	// int hunger = pet.getHunger();
-	// assertEquals(15, hunger);
-	//
-	// }
+	@Test
+	public void shouldShelterFeedAllPet() {
+		VirtualPet pet = new VirtualPet("Hold", "Akita");
+
+		underTest.intake(pet);
+		underTest.feedAll();
+
+		int hunger = pet.getHunger();
+		assertEquals(15, hunger);
+	}
 
 }

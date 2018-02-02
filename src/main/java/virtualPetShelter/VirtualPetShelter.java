@@ -12,15 +12,19 @@ public class VirtualPetShelter {
 		return pets.get(petName);
 	}
 
+	// Return Collection of Pets within Shelter
+	public Collection<VirtualPet> pets() {
+		return pets.values();
+	}
+
 	// Return specific Virtual Pet given its name
 	public void intake(VirtualPet virtualPet) {
 		String newName = virtualPet.getName();
 		pets.put(newName, virtualPet);
 	}
 
-	// Return Collection of Pets within Shelter
-	public Collection<VirtualPet> pets() {
-		return pets.values();
+	public void feedAll() {
+
 	}
 
 }
