@@ -55,6 +55,13 @@ public class VirtualPetTest {
 		assertEquals(1, check);
 	}
 
+	@Test
+	public void shouldReturnVirtualPetBordem() {
+		VirtualPet underTest = new VirtualPet(0, 0, 1);
+		int check = underTest.getBordem();
+		assertEquals(1, check);
+	}
+
 	// @Test
 	// public void shouldReturnVirtualPetBordem() {
 	//
