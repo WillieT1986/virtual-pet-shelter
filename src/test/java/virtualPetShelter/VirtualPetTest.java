@@ -43,16 +43,18 @@ public class VirtualPetTest {
 
 	@Test
 	public void shouldReturnVirtualPetHunger() {
-		VirtualPet underTest = new VirtualPet(0, 0, 0);
+		VirtualPet underTest = new VirtualPet(1, 0, 0);
 		int check = underTest.getHunger();
-		assertEquals(0, check);
+		assertEquals(1, check);
 	}
 
-	// @Test
-	// public void shouldReturnVirtualPetWater() {
-	//
-	// }
-	//
+	@Test
+	public void shouldReturnVirtualPetWater() {
+		VirtualPet underTest = new VirtualPet(0, 1, 0);
+		int check = underTest.getWater();
+		assertEquals(1, check);
+	}
+
 	// @Test
 	// public void shouldReturnVirtualPetBordem() {
 	//
