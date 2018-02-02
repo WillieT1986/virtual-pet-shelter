@@ -1,5 +1,6 @@
 package virtualPetShelter;
 
+import java.util.Collection;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -15,6 +16,11 @@ public class VirtualPetShelter {
 	public void add(VirtualPet virtualPet) {
 		String newName = virtualPet.getName();
 		pets.put(newName, virtualPet);
+	}
+
+	public Collection<VirtualPet> pets() {
+
+		return pets.values();
 	}
 
 }
