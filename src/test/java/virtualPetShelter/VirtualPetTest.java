@@ -1,5 +1,6 @@
 package virtualPetShelter;
 
+import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNotNull;
 
 import org.junit.Test;
@@ -21,5 +22,11 @@ public class VirtualPetTest {
 		assertNotNull(underTest);
 	}
 
-	// @Test
+	@Test
+	public void shouldReturnVirtualPetName() {
+		VirtualPet underTest = new VirtualPet("", "");
+		String check = underTest.getName();
+		assertEquals("", check);
+	}
+
 }
