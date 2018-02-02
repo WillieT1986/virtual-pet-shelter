@@ -1,16 +1,21 @@
 package virtualPetShelter;
 
-import static org.junit.Assert.assertNotNull;
-
 import org.junit.Test;
 
 public class VirtualPetShelterTest {
 
-	@Test
-	public void shouldInstantiateVirtualPetShelter() {
-		VirtualPetShelter underTest = new VirtualPetShelter();
+	// @Test
+	// public void shouldInstantiateVirtualPetShelter() {
+	// VirtualPetShelter underTest = new VirtualPetShelter();
+	//
+	// assertNotNull(underTest);
+	// }
 
-		assertNotNull(underTest);
+	@Test
+	public void shouldAddVirtualPetName() {
+		VirtualPetShelter underTest = new VirtualPetShelter();
+		underTest.add(VirtualPet(name));
+
 	}
 
 }

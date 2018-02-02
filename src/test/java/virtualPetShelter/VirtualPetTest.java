@@ -17,22 +17,22 @@ public class VirtualPetTest {
 
 	@Test
 	public void shouldConstructNameAndDescription() {
-		VirtualPet underTest = new VirtualPet("", "");
+		VirtualPet underTest = new VirtualPet("name", "description");
 		assertNotNull(underTest);
 	}
 
 	@Test
 	public void shouldReturnVirtualPetName() {
-		VirtualPet underTest = new VirtualPet("", "");
+		VirtualPet underTest = new VirtualPet("name", "description");
 		String check = underTest.getName();
-		assertEquals("", check);
+		assertEquals("name", check);
 	}
 
 	@Test
 	public void shouldReturnVirtualPetDescription() {
-		VirtualPet underTest = new VirtualPet("", "");
+		VirtualPet underTest = new VirtualPet("name", "description");
 		String check = underTest.getDescription();
-		assertEquals("", check);
+		assertEquals("description", check);
 	}
 
 	@Test
@@ -61,10 +61,5 @@ public class VirtualPetTest {
 		int check = underTest.getBordem();
 		assertEquals(1, check);
 	}
-
-	// @Test
-	// public void shouldReturnVirtualPetBordem() {
-	//
-	// }
 
 }
