@@ -34,7 +34,13 @@ public class VirtualPetTest {
 		VirtualPet underTest = new VirtualPet("", "");
 		String check = underTest.getDescription();
 		assertEquals("", check);
+	}
 
+	@Test
+	public void shouldContstructVirtualPetStatsHungerWaterAndBordem() {
+		VirtualPet underTest = new VirtualPet(0, 0, 0);
+
+		assertNotNull(underTest);
 	}
 
 }

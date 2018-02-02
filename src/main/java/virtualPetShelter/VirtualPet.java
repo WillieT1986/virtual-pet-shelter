@@ -1,12 +1,16 @@
 package virtualPetShelter;
 
 public class VirtualPet {
-	String name;
-	String description;
+	private String name;
+	private String description;
 
 	public VirtualPet(String name, String description) {
 		this.name = name;
 		this.description = description;
+	}
+
+	public VirtualPet(int i, int j, int k) {
+		// TODO Auto-generated constructor stub
 	}
 
 	public String getName() {
