@@ -28,6 +28,6 @@ public class VirtualPet {
 
 	public int getHunger() {
 
-		return 0;
+		return hunger;
 	}
 }
