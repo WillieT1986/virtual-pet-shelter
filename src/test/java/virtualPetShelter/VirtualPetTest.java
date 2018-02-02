@@ -29,4 +29,12 @@ public class VirtualPetTest {
 		assertEquals("", check);
 	}
 
+	@Test
+	public void shouldReturnVirtualPetDescription() {
+		VirtualPet underTest = new VirtualPet("", "");
+		String check = underTest.getDescription();
+		assertEquals("", check);
+
+	}
+
 }
