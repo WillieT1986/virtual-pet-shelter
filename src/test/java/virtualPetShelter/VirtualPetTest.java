@@ -18,7 +18,6 @@ public class VirtualPetTest {
 	@Test
 	public void shouldConstructNameAndDescription() {
 		VirtualPet underTest = new VirtualPet("", "");
-
 		assertNotNull(underTest);
 	}
 
@@ -39,8 +38,24 @@ public class VirtualPetTest {
 	@Test
 	public void shouldContstructVirtualPetStatsHungerWaterAndBordem() {
 		VirtualPet underTest = new VirtualPet(0, 0, 0);
-
 		assertNotNull(underTest);
 	}
+
+	@Test
+	public void shouldReturnVirtualPetHunger() {
+		VirtualPet underTest = new VirtualPet(0, 0, 0);
+		int check = underTest.getHunger();
+		assertEquals(0, check);
+	}
+
+	// @Test
+	// public void shouldReturnVirtualPetWater() {
+	//
+	// }
+	//
+	// @Test
+	// public void shouldReturnVirtualPetBordem() {
+	//
+	// }
 
 }

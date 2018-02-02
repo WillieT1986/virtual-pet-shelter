@@ -3,14 +3,17 @@ package virtualPetShelter;
 public class VirtualPet {
 	private String name;
 	private String description;
+	private int hunger;
+	private int water;
+	private int bordem;
 
 	public VirtualPet(String name, String description) {
 		this.name = name;
 		this.description = description;
 	}
 
-	public VirtualPet(int i, int j, int k) {
-		// TODO Auto-generated constructor stub
+	public VirtualPet(int hunger, int water, int bordem) {
+		this.hunger = hunger;
 	}
 
 	public String getName() {
@@ -21,5 +24,10 @@ public class VirtualPet {
 	public String getDescription() {
 
 		return description;
+	}
+
+	public int getHunger() {
+
+		return 0;
 	}
 }
