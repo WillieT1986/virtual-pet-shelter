@@ -68,7 +68,6 @@ public class VirtualPetTest {
 		underTest.feedPet();
 		int check = underTest.getHunger();
 		assertEquals(2, check);
-
 	}
 
 }
