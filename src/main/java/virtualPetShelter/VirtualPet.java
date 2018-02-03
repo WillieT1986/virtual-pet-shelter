@@ -54,8 +54,12 @@ public class VirtualPet {
 	}
 
 	public int feed() {
-		return feed++;
+		int feed = 1;
 
+		for (int i = feed; i >= 0; i++) {
+
+		}
+		return feed;
 	}
 
 }
