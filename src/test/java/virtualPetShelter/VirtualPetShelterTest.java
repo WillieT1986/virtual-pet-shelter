@@ -75,15 +75,15 @@ public class VirtualPetShelterTest {
 	}
 
 	// Feeding...?
-	// @Test
-	// public void shouldShelterFeedAllPet() {
-	// VirtualPet pet = new VirtualPet("Hold", "Akita");
-	//
-	// underTest.intake(pet);
-	// underTest.feedAll(1);
-	//
-	// int hunger = pet.getHunger();
-	// assertEquals(1, hunger);
-	// }
+	@Test
+	public void shouldShelterFeedAllPet() {
+		VirtualPet pet = new VirtualPet("Hold", "Akita");
+
+		underTest.intake(pet);
+		underTest.feedAll(pet);
+
+		int hunger = pet.getHunger();
+		assertEquals(15, hunger);
+	}
 
 }

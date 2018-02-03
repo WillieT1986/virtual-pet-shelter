@@ -7,8 +7,8 @@ public class VirtualPet {
 	private int water;
 	private int bordem;
 	private int feed;
-	private int thirst;
-	private int play;
+	// private int thirst;
+	// private int play;
 
 	public VirtualPet(String name, String description) {
 		this.name = name;
@@ -24,7 +24,7 @@ public class VirtualPet {
 	}
 
 	public VirtualPet(int feed, int thirst, int play) {
-		this.feed = feed++;
+		this.feed = feed;
 
 	}
 
@@ -51,6 +51,11 @@ public class VirtualPet {
 	public int getBordem() {
 
 		return bordem;
+	}
+
+	public int feed() {
+		return feed++;
+
 	}
 
 }

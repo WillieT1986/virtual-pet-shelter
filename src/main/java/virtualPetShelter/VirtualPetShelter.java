@@ -29,9 +29,10 @@ public class VirtualPetShelter {
 
 	}
 
-	// public void feedAll(int feed) {
-	// feed++;
-	//
-	// }
+	// feeding??
+	public void feedAll(VirtualPet pet) {
+		pet.feed();
+
+	}
 
 }
