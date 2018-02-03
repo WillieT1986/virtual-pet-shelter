@@ -97,7 +97,6 @@ public class VirtualPetTest {
 		assertEquals(1, check);
 		assertEquals(1, check2);
 		assertEquals(1, check3);
-
 	}
 
 }

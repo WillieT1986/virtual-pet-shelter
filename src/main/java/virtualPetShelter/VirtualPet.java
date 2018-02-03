@@ -23,27 +23,22 @@ public class VirtualPet {
 	}
 
 	public String getName() {
-
 		return name;
 	}
 
 	public String getDescription() {
-
 		return description;
 	}
 
 	public int getHunger() {
-
 		return hunger;
 	}
 
 	public int getWater() {
-
 		return water;
 	}
 
 	public int getBordem() {
-
 		return bordem;
 	}
 
@@ -54,19 +49,16 @@ public class VirtualPet {
 
 	public void waterPet() {
 		this.water += 3;
-
 	}
 
 	public void playPet() {
 		this.bordem += 1;
-
 	}
 
 	public void tick() {
 		this.hunger--;
 		this.water--;
 		this.bordem--;
-
 	}
 
 }

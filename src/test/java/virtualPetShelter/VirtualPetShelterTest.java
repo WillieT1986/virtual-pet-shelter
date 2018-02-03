@@ -114,11 +114,24 @@ public class VirtualPetShelterTest {
 		underTest.intake(new VirtualPet("Hold2", "Akita2", 0, 0, 2));
 		underTest.intake(new VirtualPet("Hold3", "Akita3"));
 		underTest.playAll();
-		VirtualPet testPet = underTest.findPet("Hold2");
-		int bordem = testPet.getBordem();
 
+		VirtualPet testPet = underTest.findPet("Hold2");
+
+		int bordem = testPet.getBordem();
 		assertEquals(3, bordem);
 		assertEquals(71, underTest.findPet("Hold3").getBordem());
-
 	}
+
+	@Test
+	public void shouldTickAllPets() {
+		VirtualPet pet = new VirtualPet("Hold", "Akita");
+
+		underTest.intake(pet);
+		underTest.tickAll();
+
+		assertEquals(49, underTest.findPet("Hold").getHunger());
+		assertEquals(59, underTest.findPet("Hold").getWater());
+		assertEquals(69, underTest.findPet("Hold").getBordem());
+	}
+
 }

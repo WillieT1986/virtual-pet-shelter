@@ -8,14 +8,13 @@ public class VirtualPetShelter {
 
 	private Map<String, VirtualPet> pets = new HashMap<>();
 
-	public VirtualPet findPet(String petName) {
-		return pets.get(petName);
-	}
-
 	// Return Collection of Pets within Shelter
 	public Collection<VirtualPet> pets() {
 		return pets.values();
+	}
 
+	public VirtualPet findPet(String petName) {
+		return pets.get(petName);
 	}
 
 	// Return specific Virtual Pet given its name
@@ -27,7 +26,6 @@ public class VirtualPetShelter {
 	public void adopt(VirtualPet pet) {
 		String newName = pet.getName();
 		pets.put(newName, pet);
-
 	}
 
 	// feeding??
@@ -35,19 +33,23 @@ public class VirtualPetShelter {
 		for (VirtualPet pet : pets.values()) {
 			pet.feedPet();
 		}
-
 	}
 
 	public void waterAll() {
 		for (VirtualPet pet : pets.values()) {
 			pet.waterPet();
 		}
-
 	}
 
 	public void playAll() {
 		for (VirtualPet pet : pets.values()) {
 			pet.playPet();
+		}
+	}
+
+	public void tickAll() {
+		for (VirtualPet pet : pets.values()) {
+			pet.tick();
 		}
 
 	}
