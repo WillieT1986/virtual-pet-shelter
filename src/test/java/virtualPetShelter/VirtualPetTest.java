@@ -78,4 +78,12 @@ public class VirtualPetTest {
 		assertEquals(5, check);
 	}
 
+	@Test
+	public void shouldPlayWithPet() {
+		VirtualPet underTest = new VirtualPet("name", "description", 0, 0, 2);
+		underTest.playPet();
+		int check = underTest.getBordem();
+		assertEquals(3, check);
+	}
+
 }
