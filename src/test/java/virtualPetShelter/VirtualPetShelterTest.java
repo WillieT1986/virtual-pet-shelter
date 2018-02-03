@@ -80,10 +80,12 @@ public class VirtualPetShelterTest {
 		VirtualPet pet = new VirtualPet("Hold", "Akita");
 
 		underTest.intake(pet);
-		underTest.feedAll(pet);
-
-		int hunger = pet.getHunger();
-		assertEquals(1, hunger);
+		underTest.intake(new VirtualPet("Hold2", "Akita2"));
+		underTest.intake(new VirtualPet("Hold3", "Akita3"));
+		underTest.feedAll();
+		VirtualPet testPet = underTest.findPet("Hold2");
+		int hunger = testPet.getHunger();
+		assertEquals(52, hunger);
 	}
 
 }

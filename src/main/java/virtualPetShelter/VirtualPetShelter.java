@@ -30,8 +30,10 @@ public class VirtualPetShelter {
 	}
 
 	// feeding??
-	public void feedAll(VirtualPet pet) {
-		pet.feed();
+	public void feedAll() {
+		for (VirtualPet pet : pets.values()) {
+			pet.feedPet();
+		}
 
 	}
 

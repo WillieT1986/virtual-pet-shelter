@@ -11,8 +11,9 @@ public class VirtualPet {
 	// private int play;
 
 	public VirtualPet(String name, String description) {
-		this.name = name;
-		this.description = description;
+		// this.name = name;
+		// this.description = description;
+		this(name, description, 50, 50, 50);
 	}
 
 	public VirtualPet(String name, String description, int hunger, int water, int bordem) {
@@ -21,11 +22,6 @@ public class VirtualPet {
 		this.hunger = hunger;
 		this.water = water;
 		this.bordem = bordem;
-	}
-
-	public VirtualPet(int feed, int thirst, int play) {
-		this.feed = feed;
-
 	}
 
 	public String getName() {
@@ -53,13 +49,10 @@ public class VirtualPet {
 		return bordem;
 	}
 
-	public int feed() {
-		int feed = 1;
+	public void feedPet() {
+		this.hunger += 2;
+		this.water -= 2;
 
-		for (int i = feed; i >= 0; i++) {
-
-		}
-		return feed;
 	}
 
 }
