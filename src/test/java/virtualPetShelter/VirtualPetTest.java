@@ -64,10 +64,18 @@ public class VirtualPetTest {
 
 	@Test
 	public void shouldFeedPet() {
-		VirtualPet underTest = new VirtualPet("name", "description", 0, 0, 1);
+		VirtualPet underTest = new VirtualPet("name", "description", 2, 0, 0);
 		underTest.feedPet();
 		int check = underTest.getHunger();
-		assertEquals(2, check);
+		assertEquals(4, check);
+	}
+
+	@Test
+	public void shouldWaterPet() {
+		VirtualPet underTest = new VirtualPet("name", "description", 0, 2, 0);
+		underTest.waterPet();
+		int check = underTest.getWater();
+		assertEquals(5, check);
 	}
 
 }

@@ -13,7 +13,7 @@ public class VirtualPet {
 	public VirtualPet(String name, String description) {
 		// this.name = name;
 		// this.description = description;
-		this(name, description, 50, 50, 50);
+		this(name, description, 50, 60, 70);
 	}
 
 	public VirtualPet(String name, String description, int hunger, int water, int bordem) {
@@ -52,7 +52,10 @@ public class VirtualPet {
 	public void feedPet() {
 		this.hunger += 2;
 		this.water -= 2;
+	}
 
+	public void waterPet() {
+		this.water += 3;
 	}
 
 }
