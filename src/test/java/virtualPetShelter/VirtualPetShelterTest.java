@@ -64,7 +64,7 @@ public class VirtualPetShelterTest {
 		underTest.feedAll();
 
 		int hunger = pet.getHunger();
-		assertEquals(15, hunger);
+		assertEquals(1, hunger);
 	}
 
 }

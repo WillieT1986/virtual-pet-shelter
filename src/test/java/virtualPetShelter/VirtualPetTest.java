@@ -62,4 +62,18 @@ public class VirtualPetTest {
 		assertEquals(1, check);
 	}
 
+	@Test
+	public void shouldReturnFeedPet() {
+		VirtualPet underTest = new VirtualPet(1, 0, 0);
+		int check = underTest.getFeed();
+		assertEquals(1, check);
+	}
+
+	// @Test
+	// public void shouldFeedPet() {
+	// VirtualPet underTest = new VirtualPet("name", "description", 0, 0, 0);
+	// int check = underTest.getFeed();
+	// assertEquals("Hold", check);
+	// }
+
 }
