@@ -23,8 +23,15 @@ public class VirtualPetShelter {
 		pets.put(newName, virtualPet);
 	}
 
-	public void feedAll() {
+	public void adopt(VirtualPet pet) {
+		String newName = pet.getName();
+		pets.put(newName, pet);
 
 	}
+
+	// public void feedAll(int feed) {
+	// feed++;
+	//
+	// }
 
 }

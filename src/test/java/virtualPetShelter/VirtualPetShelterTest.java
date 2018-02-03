@@ -57,14 +57,33 @@ public class VirtualPetShelterTest {
 	}
 
 	@Test
-	public void shouldShelterFeedAllPet() {
-		VirtualPet pet = new VirtualPet("Hold", "Akita");
+	public void shouldAdoptVirtualPets() {
+		String anotherName = "Akita";
+		VirtualPet pet = new VirtualPet("Husky", DESCRIPTION);
+		VirtualPet anotherPet = new VirtualPet(anotherName, DESCRIPTION);
 
-		underTest.intake(pet);
-		underTest.feedAll();
+		underTest.adopt(pet);
+		underTest.adopt(anotherPet);
 
-		int hunger = pet.getHunger();
-		assertEquals(1, hunger);
+		Collection<VirtualPet> pets = underTest.pets();
+
+		assertThat(pets, containsInAnyOrder(pet, anotherPet));
+
+		assertTrue(pets.contains(pet));
+		assertTrue(pets.contains(anotherPet));
+		assertEquals(2, pets.size());
 	}
+
+	// Feeding...?
+	// @Test
+	// public void shouldShelterFeedAllPet() {
+	// VirtualPet pet = new VirtualPet("Hold", "Akita");
+	//
+	// underTest.intake(pet);
+	// underTest.feedAll(1);
+	//
+	// int hunger = pet.getHunger();
+	// assertEquals(1, hunger);
+	// }
 
 }

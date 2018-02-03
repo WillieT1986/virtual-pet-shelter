@@ -24,7 +24,7 @@ public class VirtualPet {
 	}
 
 	public VirtualPet(int feed, int thirst, int play) {
-		this.feed = feed;
+		this.feed = feed++;
 
 	}
 
@@ -53,8 +53,4 @@ public class VirtualPet {
 		return bordem;
 	}
 
-	public int getFeed() {
-
-		return feed;
-	}
 }
