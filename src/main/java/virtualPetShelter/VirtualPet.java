@@ -12,7 +12,9 @@ public class VirtualPet {
 		this.description = description;
 	}
 
-	public VirtualPet(int hunger, int water, int bordem) {
+	public VirtualPet(String name, String description, int hunger, int water, int bordem) {
+		this.name = name;
+		this.description = description;
 		this.hunger = hunger;
 		this.water = water;
 		this.bordem = bordem;
