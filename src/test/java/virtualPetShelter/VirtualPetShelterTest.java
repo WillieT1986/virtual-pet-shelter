@@ -92,17 +92,33 @@ public class VirtualPetShelterTest {
 
 	@Test
 	public void shouldShelterWaterAllPet() {
-		VirtualPet pet = new VirtualPet("Hold", "Akita");// will be 52
+		VirtualPet pet = new VirtualPet("Hold", "Akita");
 
 		underTest.intake(pet);
-		underTest.intake(new VirtualPet("Hold2", "Akita2", 0, 2, 0)); // will be 2
-		underTest.intake(new VirtualPet("Hold3", "Akita3")); // will be 52
+		underTest.intake(new VirtualPet("Hold2", "Akita2", 0, 2, 0));
+		underTest.intake(new VirtualPet("Hold3", "Akita3"));
 		underTest.waterAll();
 		VirtualPet testPet = underTest.findPet("Hold2");
 		int water = testPet.getWater();
 
-		assertEquals(5, water); // This one will find the Hold2
-		assertEquals(63, underTest.findPet("Hold3").getWater()); // This one will
-		// find the Hold 3
+		assertEquals(5, water);
+		assertEquals(63, underTest.findPet("Hold3").getWater());
+
+	}
+
+	@Test
+	public void shouldShelterPlayWithAllPet() {
+		VirtualPet pet = new VirtualPet("Hold", "Akita");
+
+		underTest.intake(pet);
+		underTest.intake(new VirtualPet("Hold2", "Akita2", 0, 0, 2));
+		underTest.intake(new VirtualPet("Hold3", "Akita3"));
+		underTest.playAll();
+		VirtualPet testPet = underTest.findPet("Hold2");
+		int bordem = testPet.getBordem();
+
+		assertEquals(3, bordem);
+		assertEquals(71, underTest.findPet("Hold3").getBordem());
+
 	}
 }
