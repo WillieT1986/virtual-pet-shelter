@@ -86,4 +86,18 @@ public class VirtualPetTest {
 		assertEquals(3, check);
 	}
 
+	@Test
+	public void shouldTickPet() {
+		VirtualPet underTest = new VirtualPet("name", "description", 2, 2, 2);
+		underTest.tick();
+
+		int check = underTest.getHunger();
+		int check2 = underTest.getWater();
+		int check3 = underTest.getBordem();
+		assertEquals(1, check);
+		assertEquals(1, check2);
+		assertEquals(1, check3);
+
+	}
+
 }

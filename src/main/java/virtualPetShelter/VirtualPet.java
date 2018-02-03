@@ -62,4 +62,11 @@ public class VirtualPet {
 
 	}
 
+	public void tick() {
+		this.hunger--;
+		this.water--;
+		this.bordem--;
+
+	}
+
 }
