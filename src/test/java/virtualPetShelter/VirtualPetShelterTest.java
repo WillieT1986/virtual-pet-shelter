@@ -90,4 +90,19 @@ public class VirtualPetShelterTest {
 		assertEquals(52, underTest.findPet("Hold3").getHunger()); // This one will find the Hold 3
 	}
 
+	@Test
+	public void shouldShelterWaterAllPet() {
+		VirtualPet pet = new VirtualPet("Hold", "Akita");// will be 52
+
+		underTest.intake(pet);
+		underTest.intake(new VirtualPet("Hold2", "Akita2", 0, 2, 0)); // will be 2
+		underTest.intake(new VirtualPet("Hold3", "Akita3")); // will be 52
+		underTest.waterAll();
+		VirtualPet testPet = underTest.findPet("Hold2");
+		int water = testPet.getWater();
+
+		assertEquals(5, water); // This one will find the Hold2
+		assertEquals(63, underTest.findPet("Hold3").getWater()); // This one will
+		// find the Hold 3
+	}
 }

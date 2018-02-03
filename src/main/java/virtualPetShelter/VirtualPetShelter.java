@@ -37,4 +37,11 @@ public class VirtualPetShelter {
 
 	}
 
+	public void waterAll() {
+		for (VirtualPet pet : pets.values()) {
+			pet.waterPet();
+		}
+
+	}
+
 }
