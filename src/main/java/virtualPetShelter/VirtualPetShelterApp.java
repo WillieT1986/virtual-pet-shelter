@@ -37,20 +37,20 @@ public class VirtualPetShelterApp {
 			String optionEntered = input.nextLine();
 			if (optionEntered.equals("1")) {
 
-				System.out.println("You fed all the pets in the Shelter food.");
+				System.out.println("You fed all the pets in the Shelter food.\n");
 			} else if (optionEntered.equals("2")) {
 
-				System.out.println("You gave all the pets in the Shelter water.");
+				System.out.println("You gave all the pets in the Shelter water.\n");
 			} else if (optionEntered.equals("3")) {
 
-				System.out.println("You took " + "insert pet name" + "for a walk to the field to play.");
+				System.out.println("You took " + "insert pet name" + "for a walk to the field to play.\n");
 			} else if (optionEntered.equals("4")) {
 
-				System.out.println("Congrats on adopting your new pet!");
+				System.out.println("Congrats on adopting your new pet!\n");
 			} else if (optionEntered.equals("5")) {
 
 				System.out.println("Your pet will sure miss you.");
-				System.out.println("Thanks admitting your pet instead of discarding your pet elsewhere...");
+				System.out.println("Thanks admitting your pet instead of discarding your pet elsewhere...\n");
 			} else if (optionEntered.equals("6")) {
 				System.out.println("Are you sure you wish to quit the game?");
 				System.out.println("Enter Yes or No");
@@ -62,7 +62,7 @@ public class VirtualPetShelterApp {
 				} else {
 					decision.equalsIgnoreCase("No");
 					System.out.println("Glad you are still with us.");
-					System.out.println("The pets will be pleased that you stayed for a while longer.");
+					System.out.println("The pets will be pleased that you stayed for a while longer.\n");
 				}
 
 			}
