@@ -9,10 +9,14 @@ public class VirtualPetShelterApp {
 		VirtualPetShelter pets = new VirtualPetShelter();
 
 		VirtualPet pet1 = new VirtualPet("Hold", "Aged and fragile.", 40, 50, 60);
-		VirtualPet pet2 = new VirtualPet("Akita", "Aged and fragile.", 50, 40, 20);
+		VirtualPet pet2 = new VirtualPet("Akita", "Wolf Hybrid, friendly, protective...", 50, 40, 20);
+		VirtualPet pet3 = new VirtualPet("Blue", "Family oriented and kid friendly.", 60, 60, 60);
+		VirtualPet pet4 = new VirtualPet("Ringo", "Dog of the Vikings. Studier then a Wolf, yet gentle.", 70, 80, 80);
 
 		pets.add(pet1);
 		pets.add(pet2);
+		pets.add(pet3);
+		pets.add(pet4);
 
 		String decision = "";
 		while (!decision.equalsIgnoreCase("Yes")) {
@@ -28,8 +32,10 @@ public class VirtualPetShelterApp {
 					+ pet1.getBordem());
 			System.out.println(pet2.getName() + "\t   " + pet2.getHunger() + "\t   " + pet2.getWater() + "\t   "
 					+ pet2.getBordem());
-			System.out.println();
-			System.out.println();
+			System.out.println(pet3.getName() + "\t   " + pet3.getHunger() + "\t   " + pet3.getWater() + "\t   "
+					+ pet3.getBordem());
+			System.out.println(pet4.getName() + "\t   " + pet4.getHunger() + "\t   " + pet4.getWater() + "\t   "
+					+ pet4.getBordem());
 
 			System.out.println();
 
@@ -44,7 +50,7 @@ public class VirtualPetShelterApp {
 
 			String optionEntered = input.nextLine();
 			if (optionEntered.equals("1")) {
-
+				pets.feedAll();
 				System.out.println("You fed all the pets in the Shelter food.\n");
 			} else if (optionEntered.equals("2")) {
 

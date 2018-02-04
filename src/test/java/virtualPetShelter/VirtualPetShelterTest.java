@@ -133,5 +133,4 @@ public class VirtualPetShelterTest {
 		assertEquals(59, underTest.findPet("Hold").getWater());
 		assertEquals(69, underTest.findPet("Hold").getBordem());
 	}
-
 }
