@@ -11,7 +11,7 @@ public class VirtualPetShelterApp {
 		VirtualPet pet1 = new VirtualPet("Hold", "Aged and fragile.", 40, 50, 60);
 		VirtualPet pet2 = new VirtualPet("Akita", "Wolf Hybrid, friendly, protective...", 50, 40, 50);
 		VirtualPet pet3 = new VirtualPet("Blue", "Family oriented and kid friendly.", 60, 60, 60);
-		VirtualPet pet4 = new VirtualPet("Ringo", "Dog of the Vikings. Studier then a Wolf, yet gentle.", 70, 80, 80);
+		VirtualPet pet4 = new VirtualPet("Ringo", "Dog of the Vikings. Studier than a Wolf, yet gentle.", 70, 80, 80);
 
 		pets.add(pet1);
 		pets.add(pet2);
@@ -21,11 +21,10 @@ public class VirtualPetShelterApp {
 		String decision = "";
 		while (!decision.equalsIgnoreCase("Yes")) {
 
-			System.out.println("Thank you for volunteering at Big Al's Virtual Pet Shelter and Delicatessen!");
-			System.out.println();
+			System.out.println("Thank you for visiting your local shelter that houses forsaken Dog's.\n");
 
-			System.out.println("This is the status of your Pet's: ");
-			System.out.println();
+			System.out.println("This is the status of the Shelter Pet's: \n");
+
 			System.out.println("Name\t|Hunger\t|Thirst\t|Boredom");// the \t allows console to align output in columns
 			System.out.println("--------|-------|-------|-------");
 			System.out.println(pet1.getName() + "\t   " + pet1.getHunger() + "\t   " + pet1.getWater() + "\t   "
@@ -37,10 +36,8 @@ public class VirtualPetShelterApp {
 			System.out.println(pet4.getName() + "\t   " + pet4.getHunger() + "\t   " + pet4.getWater() + "\t   "
 					+ pet4.getBordem());
 
-			System.out.println();
+			System.out.println("\nWhat would you like to do next?\n");
 
-			System.out.println("What would you like to do next?");
-			System.out.println();
 			System.out.println("1. Feed the pets");
 			System.out.println("2. Water the pets");
 			System.out.println("3. Play with a pet");
@@ -59,19 +56,24 @@ public class VirtualPetShelterApp {
 
 			} else if (optionEntered.equals("3")) {
 				System.out.println("Choose the pet you would like to play with:");
-				System.out.println("Name: " + pet1.getName() + " Description: " + pet1.getDescription());// Hold
-				System.out.println("Name: " + pet2.getName() + " Description: " + pet2.getDescription());// Akita
-				System.out.println("Name: " + pet3.getName() + " Description: " + pet3.getDescription());// Blue
-				System.out.println("Name: " + pet4.getName() + " Description: " + pet4.getDescription());// Ringo
+				System.out.println("Name: " + pet1.getName() + "     Description: " + pet1.getDescription());// Hold
+				System.out.println("Name: " + pet2.getName() + "    Description: " + pet2.getDescription());// Akita
+				System.out.println("Name: " + pet3.getName() + "     Description: " + pet3.getDescription());// Blue
+				System.out.println("Name: " + pet4.getName() + "    Description: " + pet4.getDescription());// Ringo
+				System.out.println("\nWhich dog would you like to play with today?");
 				String petName = input.nextLine();
 				if (petName.equals("Hold")) {
+					pet1.playPet();
 					System.out.println("You took " + pet1.getName() + " for a walk to the field to play.\n");
 				} else if (petName.equals("Akita")) {
+
 					System.out.println("You took " + pet2.getName() + " for a walk to the field to play.\n");
 				} else if (petName.equals("Blue")) {
+
 					System.out.println("You took " + pet3.getName() + " for a walk to the field to play.\n");
 				} else {
 					petName.equals("Ringo");
+
 					System.out.println("You took " + pet4.getName() + " for a walk to the field to play.\n");
 				}
 
