@@ -62,6 +62,7 @@ public class VirtualPetShelterApp {
 				System.out.println("Name: " + pet4.getName() + "    Description: " + pet4.getDescription());// Ringo
 				System.out.println("\nWhich dog would you like to play with today?");
 				String petName = input.nextLine();
+
 				if (petName.equalsIgnoreCase("Hold")) {
 					pet1.playPet();
 					System.out.println("You took " + pet1.getName() + " for a walk to the field to play.\n");
@@ -78,8 +79,24 @@ public class VirtualPetShelterApp {
 				}
 
 			} else if (optionEntered.equals("4")) {
+				System.out.println("You've chosen to adopt a pet.");
+				System.out.println("Which pet would you like to adopt?");
+				String petName = input.nextLine();
 
-				System.out.println("Congrats on adopting your new pet!\n");
+				if (petName.equalsIgnoreCase("Hold")) {
+					pets.adopt(pet1);
+					System.out.println("Congrats on adopting your new pet!\n");
+				} else if (petName.equalsIgnoreCase("Akita")) {
+					pets.adopt(pet2);
+					System.out.println("Congrats on adopting your new pet!\n");
+				} else if (petName.equalsIgnoreCase("Blue")) {
+					pets.adopt(pet3);
+					System.out.println("Congrats on adopting your new pet!\n");
+				} else {
+					petName.equalsIgnoreCase("Ringo");
+					pets.adopt(pet4);
+					System.out.println("Congrats on adopting your new pet!\n");
+				}
 
 			} else if (optionEntered.equals("5")) {
 
