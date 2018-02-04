@@ -3,6 +3,7 @@ package virtualPetShelter;
 import java.util.Collection;
 import java.util.HashMap;
 import java.util.Map;
+import java.util.Map.Entry;
 
 public class VirtualPetShelter {
 
@@ -67,4 +68,14 @@ public class VirtualPetShelter {
 	public boolean doesPetRemain(String name) {
 		return pets.containsKey(name);
 	}
+
+	public String petStatus() {
+		String petStatus = "";
+		for (Entry<String, VirtualPet> eachPet : pets.entrySet()) {
+			petStatus += eachPet.getValue().getName() + "\t   " + eachPet.getValue().getHunger() + "\t   "
+					+ eachPet.getValue().getWater() + "\t   " + eachPet.getValue().getBordem() + "\n";
+		}
+		return petStatus;
+	}
+
 }

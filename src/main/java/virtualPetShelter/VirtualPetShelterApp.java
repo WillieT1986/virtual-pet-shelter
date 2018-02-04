@@ -27,15 +27,20 @@ public class VirtualPetShelterApp {
 
 			System.out.println("Name\t|Hunger\t|Thirst\t|Boredom");// the \t allows console to align output in columns
 			System.out.println("--------|-------|-------|-------");
-			System.out.println(pet1.getName() + "\t   " + pet1.getHunger() + "\t   " + pet1.getWater() + "\t   "
-					+ pet1.getBordem());
-			System.out.println(pet2.getName() + "\t   " + pet2.getHunger() + "\t   " + pet2.getWater() + "\t   "
-					+ pet2.getBordem());
-			System.out.println(pet3.getName() + "\t   " + pet3.getHunger() + "\t   " + pet3.getWater() + "\t   "
-					+ pet3.getBordem());
-			System.out.println(pet4.getName() + "\t   " + pet4.getHunger() + "\t   " + pet4.getWater() + "\t   "
-					+ pet4.getBordem());
-
+			// System.out.println(pet1.getName() + "\t " + pet1.getHunger() + "\t " +
+			// pet1.getWater() + "\t "
+			// + pet1.getBordem());
+			// System.out.println(pet2.getName() + "\t " + pet2.getHunger() + "\t " +
+			// pet2.getWater() + "\t "
+			// + pet2.getBordem());
+			// System.out.println(pet3.getName() + "\t " + pet3.getHunger() + "\t " +
+			// pet3.getWater() + "\t "
+			// + pet3.getBordem());
+			// System.out.println(pet4.getName() + "\t " + pet4.getHunger() + "\t " +
+			// pet4.getWater() + "\t "
+			// + pet4.getBordem());
+			System.out.println();
+			System.out.println(pets.petStatus());
 			System.out.println("\nWhat would you like to do next?\n");
 
 			System.out.println("1. Feed the pets");
@@ -90,7 +95,7 @@ public class VirtualPetShelterApp {
 				if (!pets.doesPetRemain(petName)) {
 					System.out.println("This pet does not exist.");
 				} else {
-					pets.adopt(petName); 
+					pets.adopt(petName);
 					System.out.println("Congrats on adopting your new pet \n" + petName + "!");
 				}
 

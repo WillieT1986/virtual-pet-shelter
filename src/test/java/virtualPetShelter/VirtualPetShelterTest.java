@@ -55,9 +55,9 @@ public class VirtualPetShelterTest {
 	@Test
 	public void shouldAdoptVirtualPets() {
 		VirtualPet pet = new VirtualPet("Husky", DESCRIPTION);
-		underTest.adopt("Husky");
+		underTest.adopt(pet.getName());
 
-		assertThat(underTest.doesPetRemain("husky"), is(false));
+		assertThat(underTest.doesPetRemain(pet.getName()), is(false));
 	}
 
 	// Feeding...?
