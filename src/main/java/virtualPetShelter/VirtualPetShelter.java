@@ -11,6 +11,7 @@ public class VirtualPetShelter {
 	// Return Collection of Pets within Shelter
 	public Collection<VirtualPet> pets() {
 		return pets.values();
+
 	}
 
 	public VirtualPet findPet(String petName) {
