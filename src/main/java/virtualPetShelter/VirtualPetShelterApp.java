@@ -90,7 +90,7 @@ public class VirtualPetShelterApp {
 				if (!pets.doesPetRemain(petName)) {
 					System.out.println("This pet does not exist.");
 				} else {
-					pets.adopt(petName);
+					pets.adopt(petName); 
 					System.out.println("Congrats on adopting your new pet \n" + petName + "!");
 				}
 
