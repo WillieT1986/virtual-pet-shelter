@@ -80,22 +80,18 @@ public class VirtualPetShelterApp {
 
 			} else if (optionEntered.equals("4")) {
 				System.out.println("You've chosen to adopt a pet.");
-				System.out.println("Which pet would you like to adopt?");
+				System.out.println("Which pet would you like to adopt?\n");
+				System.out.println("Name: " + pet1.getName());// Hold
+				System.out.println("Name: " + pet2.getName());// Akita
+				System.out.println("Name: " + pet3.getName());// Blue
+				System.out.println("Name: " + pet4.getName());// Ringo
 				String petName = input.nextLine();
 
-				if (petName.equalsIgnoreCase("Hold")) {
-					pets.adopt(pet1);
-					System.out.println("Congrats on adopting your new pet!\n");
-				} else if (petName.equalsIgnoreCase("Akita")) {
-					pets.adopt(pet2);
-					System.out.println("Congrats on adopting your new pet!\n");
-				} else if (petName.equalsIgnoreCase("Blue")) {
-					pets.adopt(pet3);
-					System.out.println("Congrats on adopting your new pet!\n");
+				if (!pets.doesPetRemain(petName)) {
+					System.out.println("This pet does not exist.");
 				} else {
-					petName.equalsIgnoreCase("Ringo");
-					pets.adopt(pet4);
-					System.out.println("Congrats on adopting your new pet!\n");
+					pets.adopt(petName);
+					System.out.println("Congrats on adopting your new pet \n" + petName + "!");
 				}
 
 			} else if (optionEntered.equals("5")) {

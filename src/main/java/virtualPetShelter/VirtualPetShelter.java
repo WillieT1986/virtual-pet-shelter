@@ -28,10 +28,10 @@ public class VirtualPetShelter {
 		pets.put(newName, virtualPet);
 	}
 
-	public void adopt(VirtualPet pet) {
-		String newName = pet.getName();
-		pets.put(newName, pet);
-	}
+	// public void adopt(VirtualPet pet) {
+	// String newName = pet.getName();
+	// pets.put(newName, pet);
+	// }
 
 	// feeding??
 	public void feedAll() {
@@ -57,5 +57,14 @@ public class VirtualPetShelter {
 			pet.tick();
 		}
 
+	}
+
+	public boolean adopt(String name) {
+		pets.remove(name);
+		return false;
+	}
+
+	public boolean doesPetRemain(String name) {
+		return pets.containsKey(name);
 	}
 }

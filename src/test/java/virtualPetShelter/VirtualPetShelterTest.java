@@ -54,16 +54,10 @@ public class VirtualPetShelterTest {
 
 	@Test
 	public void shouldAdoptVirtualPets() {
-		String anotherName = "Akita";
 		VirtualPet pet = new VirtualPet("Husky", DESCRIPTION);
-		VirtualPet anotherPet = new VirtualPet(anotherName, DESCRIPTION);
-		underTest.adopt(pet);
-		underTest.adopt(anotherPet);
-		Collection<VirtualPet> pets = underTest.pets();
-		assertThat(pets, containsInAnyOrder(pet, anotherPet));
-		assertTrue(pets.contains(pet));
-		assertTrue(pets.contains(anotherPet));
-		assertEquals(2, pets.size());
+		underTest.adopt("Husky");
+
+		assertThat(underTest.doesPetRemain("husky"), is(false));
 	}
 
 	// Feeding...?
@@ -99,7 +93,7 @@ public class VirtualPetShelterTest {
 		VirtualPet pet = new VirtualPet("Hold", "Akita");
 		underTest.intake(pet);
 		underTest.play();
-		assertEquals(71, underTest.findPet("Hold").getBordem());
+		assertEquals(74, underTest.findPet("Hold").getBordem());
 	}
 
 	@Test
