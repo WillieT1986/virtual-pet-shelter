@@ -49,7 +49,7 @@ public class VirtualPet {
 	}
 
 	public void playPet() {
-		this.bordem += 1;
+		this.bordem += 4;
 	}
 
 	public void tick() {

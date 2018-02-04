@@ -52,19 +52,38 @@ public class VirtualPetShelterApp {
 			if (optionEntered.equals("1")) {
 				pets.feedAll();
 				System.out.println("You fed all the pets in the Shelter food.\n");
+
 			} else if (optionEntered.equals("2")) {
 				pets.waterAll();
 				System.out.println("You gave all the pets in the Shelter water.\n");
-			} else if (optionEntered.equals("3")) {
 
-				System.out.println("You took " + "insert pet name" + "for a walk to the field to play.\n");
+			} else if (optionEntered.equals("3")) {
+				System.out.println("Choose the pet you would like to play with:");
+				System.out.println("Name: " + pet1.getName() + " Description: " + pet1.getDescription());// Hold
+				System.out.println("Name: " + pet2.getName() + " Description: " + pet2.getDescription());// Akita
+				System.out.println("Name: " + pet3.getName() + " Description: " + pet3.getDescription());// Blue
+				System.out.println("Name: " + pet4.getName() + " Description: " + pet4.getDescription());// Ringo
+				String petName = input.nextLine();
+				if (petName.equals("Hold")) {
+					System.out.println("You took " + pet1.getName() + " for a walk to the field to play.\n");
+				} else if (petName.equals("Akita")) {
+					System.out.println("You took " + pet2.getName() + " for a walk to the field to play.\n");
+				} else if (petName.equals("Blue")) {
+					System.out.println("You took " + pet3.getName() + " for a walk to the field to play.\n");
+				} else {
+					petName.equals("Ringo");
+					System.out.println("You took " + pet4.getName() + " for a walk to the field to play.\n");
+				}
+
 			} else if (optionEntered.equals("4")) {
 
 				System.out.println("Congrats on adopting your new pet!\n");
+
 			} else if (optionEntered.equals("5")) {
 
 				System.out.println("Your pet will sure miss you.");
 				System.out.println("Thanks admitting your pet instead of discarding your pet elsewhere...\n");
+
 			} else if (optionEntered.equals("6")) {
 				System.out.println("Are you sure you wish to quit the game?");
 				System.out.println("Enter Yes or No");
