@@ -9,7 +9,7 @@ public class VirtualPetShelterApp {
 		VirtualPetShelter pets = new VirtualPetShelter();
 
 		VirtualPet pet1 = new VirtualPet("Hold", "Aged and fragile.", 40, 50, 60);
-		VirtualPet pet2 = new VirtualPet("Akita", "Wolf Hybrid, friendly, protective...", 50, 40, 20);
+		VirtualPet pet2 = new VirtualPet("Akita", "Wolf Hybrid, friendly, protective...", 50, 40, 50);
 		VirtualPet pet3 = new VirtualPet("Blue", "Family oriented and kid friendly.", 60, 60, 60);
 		VirtualPet pet4 = new VirtualPet("Ringo", "Dog of the Vikings. Studier then a Wolf, yet gentle.", 70, 80, 80);
 
@@ -53,7 +53,7 @@ public class VirtualPetShelterApp {
 				pets.feedAll();
 				System.out.println("You fed all the pets in the Shelter food.\n");
 			} else if (optionEntered.equals("2")) {
-
+				pets.waterAll();
 				System.out.println("You gave all the pets in the Shelter water.\n");
 			} else if (optionEntered.equals("3")) {
 
