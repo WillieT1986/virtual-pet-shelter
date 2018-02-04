@@ -27,18 +27,6 @@ public class VirtualPetShelterApp {
 
 			System.out.println("Name\t|Hunger\t|Thirst\t|Boredom");// the \t allows console to align output in columns
 			System.out.println("--------|-------|-------|-------");
-			// System.out.println(pet1.getName() + "\t " + pet1.getHunger() + "\t " +
-			// pet1.getWater() + "\t "
-			// + pet1.getBordem());
-			// System.out.println(pet2.getName() + "\t " + pet2.getHunger() + "\t " +
-			// pet2.getWater() + "\t "
-			// + pet2.getBordem());
-			// System.out.println(pet3.getName() + "\t " + pet3.getHunger() + "\t " +
-			// pet3.getWater() + "\t "
-			// + pet3.getBordem());
-			// System.out.println(pet4.getName() + "\t " + pet4.getHunger() + "\t " +
-			// pet4.getWater() + "\t "
-			// + pet4.getBordem());
 			System.out.println();
 			System.out.println(pets.petStatus());
 			System.out.println("\nWhat would you like to do next?\n");
@@ -61,44 +49,16 @@ public class VirtualPetShelterApp {
 
 			} else if (optionEntered.equals("3")) { // OPTION 3
 				System.out.println("Choose the pet you would like to play with:");
-				// System.out.println("Name: " + pet1.getName() + " Description: " +
-				// pet1.getDescription());// Hold
-				// System.out.println("Name: " + pet2.getName() + " Description: " +
-				// pet2.getDescription());// Akita
-				// System.out.println("Name: " + pet3.getName() + " Description: " +
-				// pet3.getDescription());// Blue
-				// System.out.println("Name: " + pet4.getName() + " Description: " +
-				// pet4.getDescription());// Ringo
 				System.out.println("\nWhich dog would you like to play with today?");
 				System.out.println(pets.option4Display());
 				String petName = input.nextLine();
 
 				pets.play(petName);
-				// if (petName.equalsIgnoreCase("Hold")) {
-				// pet1.playPet();
 				System.out.println("You took " + petName + " for a walk to the field to play.\n");
-				// } else if (petName.equalsIgnoreCase("Akita")) {
-				// pet2.playPet();
-				// System.out.println("You took " + pet2.getName() + " for a walk to the field
-				// to play.\n");
-				// } else if (petName.equalsIgnoreCase("Blue")) {
-				// pet3.playPet();
-				// System.out.println("You took " + pet3.getName() + " for a walk to the field
-				// to play.\n");
-				// } else {
-				// petName.equalsIgnoreCase("Ringo");
-				// pet4.playPet();
-				// System.out.println("You took " + pet4.getName() + " for a walk to the field
-				// to play.\n");
-				// }
 
 			} else if (optionEntered.equals("4")) { // OPTION 4
 				System.out.println("You've chosen to adopt a pet.");
 				System.out.println("Which pet would you like to adopt?\n");
-				// System.out.println("Name: " + pet1.getName());// Hold
-				// System.out.println("Name: " + pet2.getName());// Akita
-				// System.out.println("Name: " + pet3.getName());// Blue
-				// System.out.println("Name: " + pet4.getName());// Ringo
 				System.out.println(pets.option4Display());
 				String petName = input.nextLine();
 
@@ -109,8 +69,14 @@ public class VirtualPetShelterApp {
 					System.out.println("Congrats on adopting your new pet \n" + petName + "!");
 				}
 
-			} else if (optionEntered.equals("5")) {
+			} else if (optionEntered.equals("5")) { // OPTION 5
+				System.out.println("Enter the name of the pet being surrendered: ");
+				String newPetName = input.nextLine();
 
+				System.out.println("Enter a description for the pet being surrendered: ");
+				String newPetDescription = input.nextLine();
+
+				pets.add(new VirtualPet(newPetName, newPetDescription));
 				System.out.println("Your pet will sure miss you.");
 				System.out.println("Thanks admitting your pet instead of discarding your pet elsewhere...\n");
 
