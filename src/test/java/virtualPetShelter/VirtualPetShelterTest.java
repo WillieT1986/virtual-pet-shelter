@@ -89,10 +89,10 @@ public class VirtualPetShelterTest {
 	}
 
 	@Test
-	public void shouldShelterPlayWithAllPet() {
-		VirtualPet pet = new VirtualPet("Hold", "Akita");
+	public void shouldShelterPlayWithHold() {
+		VirtualPet pet = new VirtualPet("Hold", DESCRIPTION);
 		underTest.intake(pet);
-		underTest.play();
+		underTest.play("Hold");
 		assertEquals(74, underTest.findPet("Hold").getBordem());
 	}
 

@@ -47,10 +47,9 @@ public class VirtualPetShelter {
 		}
 	}
 
-	public void play() {
-		for (VirtualPet pet : pets.values()) {
-			pet.playPet();
-		}
+	public void play(String name) {
+		pets.get(name).playPet();
+
 	}
 
 	public void tickAll() {
@@ -76,6 +75,15 @@ public class VirtualPetShelter {
 					+ eachPet.getValue().getWater() + "\t   " + eachPet.getValue().getBordem() + "\n";
 		}
 		return petStatus;
+	}
+
+	public String option4Display() {
+		String option4Display = "";
+		for (Entry<String, VirtualPet> eachPet : pets.entrySet()) {
+			option4Display += "Name: " + eachPet.getValue().getName() + "\t" + eachPet.getValue().getDescription()
+					+ "\n";
+		}
+		return option4Display;
 	}
 
 }

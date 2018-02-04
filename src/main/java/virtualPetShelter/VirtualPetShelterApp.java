@@ -61,35 +61,45 @@ public class VirtualPetShelterApp {
 
 			} else if (optionEntered.equals("3")) { // OPTION 3
 				System.out.println("Choose the pet you would like to play with:");
-				System.out.println("Name: " + pet1.getName() + "     Description: " + pet1.getDescription());// Hold
-				System.out.println("Name: " + pet2.getName() + "    Description: " + pet2.getDescription());// Akita
-				System.out.println("Name: " + pet3.getName() + "     Description: " + pet3.getDescription());// Blue
-				System.out.println("Name: " + pet4.getName() + "    Description: " + pet4.getDescription());// Ringo
+				// System.out.println("Name: " + pet1.getName() + " Description: " +
+				// pet1.getDescription());// Hold
+				// System.out.println("Name: " + pet2.getName() + " Description: " +
+				// pet2.getDescription());// Akita
+				// System.out.println("Name: " + pet3.getName() + " Description: " +
+				// pet3.getDescription());// Blue
+				// System.out.println("Name: " + pet4.getName() + " Description: " +
+				// pet4.getDescription());// Ringo
 				System.out.println("\nWhich dog would you like to play with today?");
+				System.out.println(pets.option4Display());
 				String petName = input.nextLine();
 
-				if (petName.equalsIgnoreCase("Hold")) {
-					pet1.playPet();
-					System.out.println("You took " + pet1.getName() + " for a walk to the field to play.\n");
-				} else if (petName.equalsIgnoreCase("Akita")) {
-					pet2.playPet();
-					System.out.println("You took " + pet2.getName() + " for a walk to the field to play.\n");
-				} else if (petName.equalsIgnoreCase("Blue")) {
-					pet3.playPet();
-					System.out.println("You took " + pet3.getName() + " for a walk to the field to play.\n");
-				} else {
-					petName.equalsIgnoreCase("Ringo");
-					pet4.playPet();
-					System.out.println("You took " + pet4.getName() + " for a walk to the field to play.\n");
-				}
+				pets.play(petName);
+				// if (petName.equalsIgnoreCase("Hold")) {
+				// pet1.playPet();
+				System.out.println("You took " + petName + " for a walk to the field to play.\n");
+				// } else if (petName.equalsIgnoreCase("Akita")) {
+				// pet2.playPet();
+				// System.out.println("You took " + pet2.getName() + " for a walk to the field
+				// to play.\n");
+				// } else if (petName.equalsIgnoreCase("Blue")) {
+				// pet3.playPet();
+				// System.out.println("You took " + pet3.getName() + " for a walk to the field
+				// to play.\n");
+				// } else {
+				// petName.equalsIgnoreCase("Ringo");
+				// pet4.playPet();
+				// System.out.println("You took " + pet4.getName() + " for a walk to the field
+				// to play.\n");
+				// }
 
-			} else if (optionEntered.equals("4")) {
+			} else if (optionEntered.equals("4")) { // OPTION 4
 				System.out.println("You've chosen to adopt a pet.");
 				System.out.println("Which pet would you like to adopt?\n");
-				System.out.println("Name: " + pet1.getName());// Hold
-				System.out.println("Name: " + pet2.getName());// Akita
-				System.out.println("Name: " + pet3.getName());// Blue
-				System.out.println("Name: " + pet4.getName());// Ringo
+				// System.out.println("Name: " + pet1.getName());// Hold
+				// System.out.println("Name: " + pet2.getName());// Akita
+				// System.out.println("Name: " + pet3.getName());// Blue
+				// System.out.println("Name: " + pet4.getName());// Ringo
+				System.out.println(pets.option4Display());
 				String petName = input.nextLine();
 
 				if (!pets.doesPetRemain(petName)) {
