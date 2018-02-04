@@ -67,6 +67,7 @@ public class VirtualPetShelterApp {
 				}
 
 			}
+			shelterPet1.tick();
 		} // end while loop
 
 		input.close();
