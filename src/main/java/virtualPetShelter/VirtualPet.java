@@ -6,11 +6,8 @@ public class VirtualPet {
 	private int hunger;
 	private int water;
 	private int bordem;
-	// private int feed;
 
 	public VirtualPet(String name, String description) {
-		// this.name = name;
-		// this.description = description;
 		this(name, description, 50, 60, 70);
 	}
 
