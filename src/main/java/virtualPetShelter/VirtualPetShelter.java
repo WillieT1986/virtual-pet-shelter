@@ -14,6 +14,10 @@ public class VirtualPetShelter {
 
 	}
 
+	public void add(VirtualPet pet) {
+		pets.put(pet.getName(), pet);
+	}
+
 	public VirtualPet findPet(String petName) {
 		return pets.get(petName);
 	}
@@ -54,5 +58,4 @@ public class VirtualPetShelter {
 		}
 
 	}
-
 }

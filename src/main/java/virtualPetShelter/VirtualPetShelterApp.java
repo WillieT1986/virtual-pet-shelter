@@ -6,8 +6,13 @@ public class VirtualPetShelterApp {
 
 	public static void main(String[] args) {
 		Scanner input = new Scanner(System.in);
-		VirtualPet shelterPet1 = new VirtualPet("Hold", "Aged and fragile.", 40, 50, 60);
-		VirtualPet shelterPet2 = new VirtualPet("Akita", "Aged and fragile.", 50, 40, 20);
+		VirtualPetShelter pets = new VirtualPetShelter();
+
+		VirtualPet pet1 = new VirtualPet("Hold", "Aged and fragile.", 40, 50, 60);
+		VirtualPet pet2 = new VirtualPet("Akita", "Aged and fragile.", 50, 40, 20);
+
+		pets.add(pet1);
+		pets.add(pet2);
 
 		String decision = "";
 		while (!decision.equalsIgnoreCase("Yes")) {
@@ -19,10 +24,10 @@ public class VirtualPetShelterApp {
 			System.out.println();
 			System.out.println("Name\t|Hunger\t|Thirst\t|Boredom");// the \t allows console to align output in columns
 			System.out.println("--------|-------|-------|-------");
-			System.out.println(shelterPet1.getName() + "\t   " + shelterPet1.getHunger() + "\t   "
-					+ shelterPet1.getWater() + "\t   " + shelterPet1.getBordem());
-			System.out.println(shelterPet2.getName() + "\t   " + shelterPet2.getHunger() + "\t   "
-					+ shelterPet2.getWater() + "\t   " + shelterPet2.getBordem());
+			System.out.println(pet1.getName() + "\t   " + pet1.getHunger() + "\t   " + pet1.getWater() + "\t   "
+					+ pet1.getBordem());
+			System.out.println(pet2.getName() + "\t   " + pet2.getHunger() + "\t   " + pet2.getWater() + "\t   "
+					+ pet2.getBordem());
 			System.out.println();
 			System.out.println();
 
@@ -69,8 +74,7 @@ public class VirtualPetShelterApp {
 				}
 
 			}
-			shelterPet1.tick();
-			shelterPet2.tick();
+			pets.tickAll();
 		} // end while loop
 
 		input.close();
